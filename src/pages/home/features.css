@@ -1,0 +1,202 @@
+.features {
+  padding: 6rem 2rem;
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.features-title {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #1a5721;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.features-subtitle {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #4a5568;
+  margin-bottom: 4rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  border: 1px solid rgba(26, 87, 33, 0.1);
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a5721, #2E7D32);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(26, 87, 33, 0.15);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: #1a5721;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease;
+  display: inline-block;
+  background: rgba(26, 87, 33, 0.1);
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.feature-card:hover .feature-icon {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1) rotate(10deg);
+}
+
+.feature-card .feature-title {
+  font-size: 1.5rem;
+  color: #1a5721;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  transition: color 0.4s ease;
+  text-align: left;
+}
+
+.feature-card:hover .feature-title {
+  color: white;
+}
+
+.feature-description {
+  color: #4a5568;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+  transition: color 0.4s ease;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.feature-card:hover .feature-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-link {
+  text-decoration: none;
+  color: #1a5721;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  background: rgba(26, 87, 33, 0.1);
+  margin-top: auto;
+  font-size: 1.1rem;
+}
+
+.feature-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transform: translateX(5px);
+}
+
+.feature-card:hover .feature-link {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 1200px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding: 4rem 1rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .features-title {
+    font-size: 2.2rem;
+  }
+
+  .features-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-card {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(4) { animation-delay: 0.4s; }
