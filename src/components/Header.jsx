@@ -1,23 +1,76 @@
-import React from 'react'
-import './header.css'
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './header.css';
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="header">
-    <div className="header__container">
-      <h1 className="header__title">Mental Note</h1>
-      <nav className="header__nav">
-        <ul className="header__nav-list">
-          <li className="header__nav-item"><a href="/" className="header__link">Home</a></li>
-          <li className="header__nav-item"><a href="/symptom-checker" className="header__link">Symptom Checker</a></li>
-          <li className="header__nav-item"><a href="/mood-tracker" className="header__link">Mood Tracker</a></li>
-          <li className="header__nav-item"><a href="/chatbot" className="header__link">Chatbot</a></li>
-          <li className="header__nav-item"><a href="/therapist" className="header__link">Therapist</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  )
+      <div className="header-container">
+        <div className="logo">
+          <Link to="/" onClick={closeMenu}>
+            <h1>
+              <span className="highlight">Mind</span>Ease
+            </h1>
+          </Link>
+        </div>
+
+        <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle menu">
+          <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}></span>
+        </button>
+
+        <nav className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+          <Link 
+            className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} 
+            to="/" 
+            onClick={closeMenu}
+          >
+            Home
+          </Link>
+          <Link 
+            className={`nav-link ${location.pathname === '/symptom-checker' ? 'active' : ''}`} 
+            to="/symptom-checker" 
+            onClick={closeMenu}
+          >
+            Symptom Checker
+          </Link>
+          <Link 
+            className={`nav-link ${location.pathname === '/mood-tracker' ? 'active' : ''}`} 
+            to="/mood-tracker" 
+            onClick={closeMenu}
+          >
+            Mood Tracker
+          </Link>
+          <Link 
+            className={`nav-link ${location.pathname === '/chatbot' ? 'active' : ''}`} 
+            to="/chatbot" 
+            onClick={closeMenu}
+          >
+            Chatbot
+          </Link>
+          <Link 
+            className={`nav-link ${location.pathname === '/therapist' ? 'active' : ''}`} 
+            to="/therapist" 
+            onClick={closeMenu}
+          >
+            Therapists
+          </Link>
+        </nav>
+        
+        <button className="login-button">Login</button>
+      </div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
