@@ -12,7 +12,7 @@ function Testimonials() {
       rating: 5
     },
     {
-      name: "Michael Chen",
+      name: "Michael Doe",
       role: "Software Engineer",
       image: "https://randomuser.me/api/portraits/men/2.jpg",
       text: "The symptom checker and therapist matching feature made it so easy to find the right professional help. I'm grateful for this platform.",

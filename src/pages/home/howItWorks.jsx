@@ -37,7 +37,7 @@ function HowItWorks() {
         <div className="steps-container">
           {steps.map((step, index) => (
             <div className="step-card" key={index}>
-              <div className="step-number" style={{ backgroundColor: step.color }}>
+              <div className="step-number" >
                 {index + 1}
               </div>
               <div className="step-icon" style={{ color: step.color }}>
@@ -46,7 +46,7 @@ function HowItWorks() {
               <h3 className="step-title">{step.title}</h3>
               <p className="step-description">{step.description}</p>
               <div className="step-connector" 
-                   style={{ backgroundColor: step.color }}></div>
+                   ></div>
             </div>
           ))}
         </div>

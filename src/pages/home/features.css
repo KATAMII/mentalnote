@@ -22,7 +22,7 @@
 
 .features-subtitle {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   color: #4a5568;
   margin-bottom: 4rem;
   max-width: 600px;
@@ -93,7 +93,7 @@
 }
 
 .feature-card .feature-title {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: #1a5721;
   margin-bottom: 1rem;
   font-weight: 700;
@@ -114,7 +114,7 @@
   z-index: 1;
   transition: color 0.4s ease;
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .feature-card:hover .feature-description {
@@ -135,7 +135,7 @@
   border-radius: 25px;
   background: rgba(26, 87, 33, 0.1);
   margin-top: auto;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .feature-link:hover {

@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    // Handle newsletter subscription
+    console.log('Subscribed:', email);
+    setEmail('');
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -29,15 +38,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/blog">Blog</Link></li>
-            </ul>
-          </div>
+         
 
           <div className="footer-section">
             <h4>Services</h4>
@@ -53,20 +54,40 @@ const Footer = () => {
             <h4>Contact Us</h4>
             <ul>
               <li>Email: support@mindease.com</li>
-              <li>Phone: +1 (555) 123-4567</li>
+              <li>Phone: +254 - 756756789</li>
               <li>Address: 123 Mental Health St</li>
               <li>Available 24/7</li>
             </ul>
           </div>
+          <div className="footer-section">
+            <h4>Newsletter</h4>
+            <p className="newsletter-description">
+              Subscribe to our newsletter for mental health tips, updates, and resources.
+            </p>
+            <form className="newsletter-form" onSubmit={handleSubscribe}>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="newsletter-input"
+              />
+              <button type="submit" className="newsletter-button">
+                Subscribe <FaPaperPlane />
+              </button>
+            </form>
+          </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} MindEase. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} lydiaMwangi. All rights reserved.</p>
           <div className="footer-links">
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/terms">Terms of Service</Link>
           </div>
         </div>
+        
       </div>
     </footer>
   );
