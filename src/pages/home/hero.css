@@ -1,10 +1,10 @@
 .hero {
-  height: calc(100vh - 70px);
+  height: calc(100vh - 0px);
   background-image: linear-gradient(
-    rgba(72, 187, 120, 0.2), /* Calming green */
-    rgba(56, 178, 172, 0.2)  /* Soft teal/blue */
+    rgba(3, 3, 3, 0.3), /* Calming green */
+    rgba(7, 7, 7, 0.3)  /* Soft teal/blue */
   ),
-  url('../../assets/yoga.jpeg');
+  url('../../assets/bg5.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,6 +17,7 @@
   position: relative;
   overflow: hidden;
 }
+
 
 .hero::before {
   content: '';
@@ -45,10 +46,10 @@
 
 .hero-title {
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 4px rgba(5, 5, 5, 0.2);
   background: linear-gradient(45deg, #4CAF50, #81C784); /* Green gradient */
   -webkit-background-clip: text;
   background-clip: text;
@@ -56,7 +57,7 @@
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-bottom: 2.5rem;
   line-height: 1.6;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);

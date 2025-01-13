@@ -18,7 +18,7 @@ function Header() {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <Link to="/" onClick={closeMenu}>
+          <Link to="/" onClick={closeMenu}className='log'>
             <h1>
               <span className="highlight">Mind</span>Ease
             </h1>
