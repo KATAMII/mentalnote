@@ -1,0 +1,313 @@
+.therapist-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  font-family: 'Playfair Display', serif;
+}
+
+.therapist-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #1a5721 0%, #2E7D32 100%);
+  color: white;
+  border-radius: 15px;
+}
+
+.therapist-header h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.therapist-header p {
+  font-size: 1.6rem;
+  opacity: 0.9;
+}
+
+.search-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.filter-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-item {
+  flex: 1;
+  min-width: 200px;
+  font-size: 1.1rem;
+}
+
+.filter-item label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.filter-item select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  color: #2c3e50;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-item select:hover {
+  border-color: #1a5721;
+}
+
+.therapist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.therapist-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.therapist-card:hover {
+  transform: translateY(-5px);
+}
+
+.therapist-card-header {
+  position: relative;
+}
+
+.therapist-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.rating {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #1a5721;
+}
+
+.therapist-card-content {
+  padding: 1.5rem;
+}
+
+.therapist-card-content h3 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.therapist-card-content h4 {
+  font-size: 1.6rem;
+  color: #1a5721;
+  margin-bottom: 1rem;
+}
+
+.therapist-details {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.therapist-details p {
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+.therapist-card-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.view-profile-btn,
+.book-session-btn {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-profile-btn {
+  background-color: #e2e8f0;
+  color: #2c3e50;
+}
+
+.book-session-btn {
+  background-color: #1a5721;
+  color: white;
+}
+
+.view-profile-btn:hover {
+  background-color: #cbd5e0;
+}
+
+.book-session-btn:hover {
+  background-color: #2E7D32;
+}
+
+.booking-info {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.pricing-section {
+  text-align: center;
+}
+
+.pricing-section h2 {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.price-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.price-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.price-card.featured {
+  background: #1a5721;
+  color: white;
+  transform: scale(1.05);
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+}
+
+.price-card.featured:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.price-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.price-card .price {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.book-now-btn {
+  background-color: #1a5721;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.price-card.featured .book-now-btn {
+  background-color: white;
+  color: #1a5721;
+}
+
+.book-now-btn:hover {
+  background-color: #2E7D32;
+}
+
+.price-card.featured .book-now-btn:hover {
+  background-color: #f8f9fa;
+}
+
+.help-section {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.help-section h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.help-section p {
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+.consultation-btn {
+  background-color: #1a5721;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.consultation-btn:hover {
+  background-color: #2E7D32;
+}
+
+@media (max-width: 768px) {
+  .filter-group {
+    flex-direction: column;
+  }
+
+  .filter-item {
+    width: 100%;
+  }
+
+  .therapist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card.featured {
+    transform: none;
+  }
+
+  .price-card.featured:hover {
+    transform: translateY(-5px);
+  }
+}
